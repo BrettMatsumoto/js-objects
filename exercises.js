@@ -250,6 +250,17 @@ printOrders(arrayOfObjects);
         to inspect your results.
 */
 
+var sumObj = {
+    a: 5,
+    b: 4,
+    result: undefined
+}
+function objectAddition(object){
+    object.result = object.a + object.b
+     return object}
+var sumObjResult = objectAddition(sumObj2);
+console.log(sumObjResult);
+
 
 /*
 9. Print sum function and add as new key-value
@@ -268,7 +279,11 @@ printOrders(arrayOfObjects);
         **create more** objects and invoke your function multiple times.
  */
 
-
+ function printObj(input){
+    input.output = input.a + ' + ' + input.b + ' + ' + ' = ' + input.result;
+    return input.output;
+ }
+console.log(printObj(sumObjResult));
 /*
 10. Putting stuff in `plainBox`
         Declare a function named putInPlainBox and a single parameter which will be an object. Within this function, write a 
