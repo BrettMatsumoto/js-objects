@@ -20,6 +20,7 @@ author: ["Darius Hinks", 'Cawkwell', 'Ben Counter'],
 category: 'Epic Novel',
 pages: 795
 };
+console.log(books);
   
 /*
 2.  Declare a variable named `dog` and create the following properties (key-value pairs) to the object:
@@ -36,6 +37,14 @@ pages: 795
  "My dog `name` is `age` year old and likes to `speak` at strangers."
 */ 
 
+var dog = {
+    name: 'Honey',
+    age: 8,
+    vegetarian: false,
+    color: ['brown fur', 'black paws' ],
+    speak: 'Bark'
+}
+console.log('my dog ' + dog.name + ' is ' + dog.age + ' years old and likes to ' + dog.speak + ' at strangers.')
 
 
 //An empty object
