@@ -258,7 +258,7 @@ var sumObj = {
 function objectAddition(object){
     object.result = object.a + object.b
      return object}
-var sumObjResult = objectAddition(sumObj2);
+var sumObjResult = objectAddition(sumObj);
 console.log(sumObjResult);
 
 
@@ -293,8 +293,14 @@ console.log(printObj(sumObjResult));
         Invoke your function and pass in your object (which should be `plainBox`), store the result to a variable named 
         plainBoxResult and use `console.log` to inspect your results.
  */
-
-
+function putInPlainBox(object){
+    for (i=0;i<10;i++){
+        var randomNumbers = Math.floor(Math.random()*10);
+        object.contents.push(randomNumbers);
+    } return object
+}
+var plainBoxResult = putInPlainBox(plainBox);
+console.log(plainBoxResult);
 /*
 11. Detecting transmission
     Declare a function named detectingTransmission and a single parameter which will be an object. Within this function 
@@ -305,7 +311,14 @@ console.log(printObj(sumObjResult));
 
     Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
-
+function detectingTransmission(object){
+    if (object.isAutomaticTransmission === true){
+        return 'Has automatic transmission'
+    } else {
+        return 'Does not have automatic transmission'
+    }
+}
+console.log(detectingTransmission(stockCar));
 
 /*
 12.  Who's driving this thing?!
@@ -318,7 +331,12 @@ console.log(printObj(sumObjResult));
      Invoke your function and pass in your objects, store the result to a variable named stockCarWithDriver, and inspect 
       your results. Consider using `plainPerson` as your driver.
  */
-
+function addDriver(object, person){
+    object.driver = person;
+    return object
+} 
+var stockCarWithDriver = addDriver(stockCar, plainPerson);
+console.log(stockCarWithDriver);
 
 
 
